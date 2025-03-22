@@ -11,12 +11,7 @@
      <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
      
   	<script src="${pageContext.request.contextPath}/js/script.js" defer></script>
-  	
-
-
-     
-     
-    
+      
 </head>
 <body>s
     <div class="container">
