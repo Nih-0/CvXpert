@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: black;
+    color: #39ff14;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Noise texture */
+    opacity: 0.7; 
+    pointer-events: none;
+}
+
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left-section {
+    color: #39ff14; 
+    font-size: 2rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.left-section .tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.left-section span {
+    font-weight: bold;
+    border-bottom: 2px solid #39ff14; 
+}
+
+
+.login-card {
+    flex: 1;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+
+.login-card h2 {
+    color: white; 
+    margin-bottom: 1rem;
+}
+
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white; 
+    outline: none;
+}
+
+
+.login-card input::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white; 
+    font-size: 0.9rem;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #39ff14;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    background: #30d611;
+}
+
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: white; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: #ffd700;
+}
+
+
+.signup, .footer-links {
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.signup a, .footer-links a {
+    color: white;
+    text-decoration: underline;
+}
+
+.or {
+    color: white;
+    margin: 10px 0;
+}
