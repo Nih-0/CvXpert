@@ -1,8 +1,9 @@
 [phases.setup]
-nixPkgs = ["openjdk", "tomcat", "wget", "gnutar"]  # Ensure wget and tar are installed
+nixPkgs = ["openjdk", "tomcat", "wget", "gnutar", "curl"]  # Ensure wget, curl, and tar are installed
 
 [phases.build]
 cmds = [
+  "apt-get update && apt-get install -y wget",  # Ensure wget is installed in case nixPkgs doesn't work
   "wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.20/bin/apache-tomcat-10.1.20.tar.gz",
   "tar -xvzf apache-tomcat-10.1.20.tar.gz",
   "mv apache-tomcat-10.1.20 tomcat"
