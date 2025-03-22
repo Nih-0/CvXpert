@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["openjdk"]
+nixPkgs = ["openjdk", "tomcat", "wget"]
 
 [phases.build]
 cmds = [
@@ -9,4 +9,4 @@ cmds = [
 ]
 
 [start]
-cmd = "./tomcat/bin/catalina.sh run"
+cmd = "tomcat/bin/catalina.sh run"
