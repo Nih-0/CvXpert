@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["openjdk", "tomcat", "wget"]
+nixPkgs = ["openjdk", "tomcat", "wget", "gnutar"]  # Ensure wget and tar are installed
 
 [phases.build]
 cmds = [
