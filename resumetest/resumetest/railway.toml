@@ -1,11 +1,24 @@
 [build]
 builder = "NIXPACKS"
-watchPatterns = ["index.jsp",""]
+watchPatterns = ["index.jsp"]
 
 [deploy]
 runtime = "V2"
 numReplicas = 1
 sleepApplication = false
-multiRegionConfig = {"us-west2":{"numReplicas":1}}
+multiRegionConfig = { "us-west2" = { numReplicas = 1 } }
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+
+[phases.setup]
+nixPkgs = ["openjdk", "wget", "gnutar", "curl", "unzip"]
+
+[phases.build]
+cmds = [
+  "wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.39/bin/apache-tomcat-10.1.39.tar.gz",
+  "tar -xvzf apache-tomcat-10.1.39.tar.gz",
+  "mv apache-tomcat-10.1.39 tomcat"
+]
+
+[start]
+cmd = "./tomcat/bin/catalina.sh run"
